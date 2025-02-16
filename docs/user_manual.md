@@ -62,7 +62,7 @@ This 5G Layer 2 protocol stack implementation simulates the data processing of a
 
 ### Step 3: Get the Code
 ```bash
-git clone https://github.com/yourusername/5g-l2-implementation.git
+git clone https://github.com/Mustafa-Kamil/5g-l2-implementation.git
 cd 5g-l2-implementation
 ```
 

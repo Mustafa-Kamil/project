@@ -69,7 +69,7 @@ This implementation focuses on the User Plane (U-Plane) of the 5G NR protocol st
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/5g-l2-implementation.git
+git clone https://github.com/Mustafa-Kamil/5g-l2-implementation.git
 cd 5g-l2-implementation
 ```
 2. Open the project in VS Code
@@ -140,17 +140,14 @@ Key configuration parameters can be modified in:
 ## License
 - MIT License
 - Copyright (c) 2024
-- [Full license text available in LICENSE file]
 
 ## Authors
-- [Your Name]
-- [Your Email]
-- [Your Institution]
+- Mustafa Kamil - 174098
+
 
 ## Acknowledgments
 - 3GPP specifications
 - Open source community
-- [Your Institution Name]
 
 ## Version History
 - v1.0.0: Initial release
