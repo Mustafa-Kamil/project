@@ -2,41 +2,62 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build_protocol_stack",
             "type": "shell",
             "command": "C:/MinGW/bin/gcc.exe",
             "args": [
                 "-o",
-                "ip_generator.exe",
-                "main.c",
-                "ip_packet_generator.c",
-                "-Wall",
-                "-v"
+                "test_protocol_stack.exe",
+                "tests/test_protocol_stack.c",
+                "src/pdcp.c",
+                "src/rlc.c",
+                "src/mac.c",
+                "-I./include",
+                "-Wall"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": {
-                "owner": "cpp",
-                "fileLocation": ["relative", "${workspaceFolder}"],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
             }
         },
         {
-            "label": "run",
+            "label": "build_full_stack",
             "type": "shell",
-            "command": "${workspaceFolder}/ip_generator.exe",
-            "dependsOn": "build",
+            "command": "C:/MinGW/bin/gcc.exe",
+            "args": [
+                "-o",
+                "test_full_stack.exe",
+                "tests/test_full_stack.c",
+                "src/pdcp.c",
+                "src/rlc.c",
+                "src/mac.c",
+                "ip_packet_generator.c",
+                "-I./include",
+                "-Wall"
+            ],
             "group": {
-                "kind": "test",
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build_performance_test",
+            "type": "shell",
+            "command": "C:/MinGW/bin/gcc.exe",
+            "args": [
+                "-o",
+                "test_performance.exe",
+                "tests/test_performance.c",
+                "src/pdcp.c",
+                "src/rlc.c",
+                "src/mac.c",
+                "src/profiling.c",
+                "ip_packet_generator.c",
+                "-I./include",
+                "-Wall"
+            ],
+            "group": {
+                "kind": "build",
                 "isDefault": true
             }
         }
